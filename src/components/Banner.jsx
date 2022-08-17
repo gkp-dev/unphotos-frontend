@@ -29,7 +29,7 @@ function Banner() {
     }
     
     return (
-        <section id="banner" className={`w-screen h-96 relative h-large bg-cover text-3xl text-white font-satisfy ${backgroundImage}`}>
+        <section id="banner" className={`w-screen h-large md:h-96 relative bg-cover text-3xl text-white font-satisfy ${backgroundImage}`}>
 
             <div className="content absolute top-40 left-20">
             <div className=" flex">

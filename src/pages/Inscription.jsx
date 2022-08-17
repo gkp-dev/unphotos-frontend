@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import postToken from '../helpers/postToken';
 
+
+
 function Inscription() {
 
     //Set user input 
@@ -56,7 +58,7 @@ function Inscription() {
     }
     
     //Send user input to the server (POST)
-    const response = await fetch(`${process.env.REACT_APP_URL}api/users`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/users`, {
         method: 'POST', 
         mode: 'cors', 
         headers: {

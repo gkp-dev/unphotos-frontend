@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 function ProtectedRoutes(props) {
     const [user, setUser] = useState({})
     const [token, setToken] = useState(null)
-    const[isLoading, setLoading]= useState(true)
+    const [isLoading, setLoading]= useState(true)
     const Component = props.component
 
     useEffect(() => {
@@ -12,11 +12,11 @@ function ProtectedRoutes(props) {
             const getUser = async () => {
         
                 //Retreive Token
-                const sessionToken = await sessionStorage.getItem('token')
+                const sessionToken = sessionStorage.getItem('token')
                 setToken(sessionToken)
 
                 //Fetch User    
-                const response = await fetch(`${process.env.REACT_APP_URL}api/users/me`, {
+                const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/users/me`, {
                     method: 'get',
                     headers: new Headers({
                         "x-auth-token": `${sessionToken}`

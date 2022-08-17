@@ -1,15 +1,11 @@
 import React, {useState, useEffect}from 'react'
-import nodeFetch from 'node-fetch';
-import { createApi } from "unsplash-js";
+import unsplash from '../config/unsplash'
 
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import ContainerImages from '../components/ContainerImages'
 
-const unsplash = createApi({
-        accessKey: `${process.env.REACT_APP_MY_ACCESS_KEY}`,
-        fetch: nodeFetch,
-});
+
 
 
 function Home() {

@@ -4,6 +4,8 @@ import postToken from '../helpers/postToken';
 
 
 
+
+
 function Connexion() {
 
     //Set user input 
@@ -50,7 +52,7 @@ function Connexion() {
         }   
     
     //Post user info
-    const response = await fetch(`${process.env.REACT_APP_URL}api/auth`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/auth`, {
         method: 'POST',
         mode: 'cors',
         headers: {
