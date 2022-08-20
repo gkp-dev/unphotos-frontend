@@ -14,11 +14,10 @@ function Home() {
     
     async function fetchImages() {
         const reqData = await unsplash.photos.list({perPage:40})
-         await setImagesResponse(reqData); 
+         setImagesResponse(reqData); 
     }    
     
-//Search by name
-    
+    //Search by name
     async function search(name = '') {
         if (name === ''|| !name) {
         return ''
@@ -30,14 +29,11 @@ function Home() {
         orientation: 'portrait',
         });
 
-        await setSearchPhotoResponse(fetchImages);
+        setSearchPhotoResponse(fetchImages);
         
-}
+    }
     useEffect(() => {
         fetchImages()
-        search()
-      
-        
     }, [])
 
     

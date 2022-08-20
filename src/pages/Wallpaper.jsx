@@ -33,14 +33,12 @@ function Wallpaper() {
         orientation: 'portrait',
         });
 
-        await setSearchPhotoResponse(searchImages);
+        setSearchPhotoResponse(searchImages);
        
         
 }
     useEffect(() => {
         fetchImages()
-        search()
-        
     }, [])
     
     return (

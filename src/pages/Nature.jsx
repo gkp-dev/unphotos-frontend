@@ -39,8 +39,6 @@ function Nature() {
 }
     useEffect(() => {
         fetchImages()
-        search()
-        
     }, [])
     
     return (

@@ -32,14 +32,12 @@ function Water() {
         perPage: 30,
         orientation: 'portrait',
         });
-
-        await setSearchPhotoResponse(searchImages);
+        
+        setSearchPhotoResponse(searchImages);
         
 }
     useEffect(() => {
-        fetchImages()
-        search()
-        
+        fetchImages()   
     }, [])
     
     return (

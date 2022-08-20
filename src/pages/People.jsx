@@ -39,8 +39,6 @@ function People() {
 }
     useEffect(() => {
         fetchImages()
-        search()
-        
     }, [])
     
     return (
